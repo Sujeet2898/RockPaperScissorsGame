@@ -2,13 +2,13 @@ import java.util.*;
 public class RockPaperScissorsGame {
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
         System.out.println("Welcome to Rock, Paper, Scissors!");
 
         while (true) {
 
             System.out.print("1st player move: For moving, kindly enter rock, paper, or scissors otherwise enter quit.");
-            String player1Move = in.nextLine();
+            String player1Move = scn.nextLine();
 
             if (player1Move.equals("quit")) {
                 break;
