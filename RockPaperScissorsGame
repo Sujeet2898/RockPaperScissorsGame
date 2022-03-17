@@ -7,8 +7,7 @@ public class RockPaperScissorsGame {
 
         while (true) {
 
-            System.out.print("1st player move: For moving, kindly enter rock, paper, or " +
-                    "scissors otherwise enter quit. ");
+            System.out.print("1st player move: For moving, kindly enter rock, paper, or scissors otherwise enter quit.");
             String player1Move = in.nextLine();
 
             if (player1Move.equals("quit")) {
