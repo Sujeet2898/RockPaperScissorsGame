@@ -1,0 +1,54 @@
+import java.util.*;
+public class RockPaperScissorsGame {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Welcome to Rock, Paper, Scissors!");
+
+        while (true) {
+
+            System.out.print("1st player move: For moving, kindly enter rock, paper, or " +
+                    "scissors otherwise enter quit. ");
+            String player1Move = in.nextLine();
+
+            if (player1Move.equals("quit")) {
+                break;
+            }
+
+            if (!player1Move.equals("rock") && !player1Move.equals("paper") && !player1Move.equals("scissors")) {
+
+                System.out.println("Invalid move!");
+
+            } else {
+
+                int randomNo = (int) (Math.random() * 3);
+
+                String player2Move;
+                if (randomNo == 0) {
+                    player2Move = "rock";
+                } else if (randomNo == 1) {
+                    player2Move = "paper";
+                } else {
+                    player2Move = "scissors";
+                }
+                System.out.println("Opponent move: " + player2Move);
+
+
+                if (player1Move.equals(player2Move)) {
+                    System.out.println("It's a tie!");
+                } else if ((player1Move.equals("rock") && player2Move.equals("scissors")) ||
+                        (player1Move.equals("scissors") && player2Move.equals("paper")) ||
+                        (player1Move.equals("paper") && player2Move.equals("rock"))) {
+                    System.out.println("player1Move won!");
+                } else {
+                    System.out.println("player1Move lost!");
+                }
+
+            }
+
+        }
+
+        System.out.println("Thanks for playing Rock, Paper, Scissors Game!");
+
+    }
+}
