@@ -30,7 +30,7 @@ public class RockPaperScissorsGame {
                 } else {
                     player2Move = "scissors";
                 }
-                System.out.println("Opponent move: " + player2Move);
+                System.out.println("Player2's Move: " + player2Move);
 
 
                 if (player1Move.equals(player2Move)) {
